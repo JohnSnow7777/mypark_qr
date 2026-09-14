@@ -67,9 +67,10 @@
 
         .btn {
             display: grid;
-            grid-template-columns: 50px 1fr;
+            grid-template-columns: 46px 1fr;
             align-items: center;
-            padding: 12px 24px;
+            padding: 0 16px; /* 로고를 더 왼쪽으로 밀기 위해 좌측 여백 축소 */
+            height: 60px; /* 애플과 구글 버튼의 상하 크기를 완벽하게 동일하게 고정 */
             color: white;
             text-decoration: none;
             border-radius: 12px;
@@ -95,18 +96,18 @@
 
         .btn img {
             height: 34px;
-            max-width: 50px;
+            max-width: 46px;
             object-fit: contain;
-            justify-self: center;
+            justify-self: start; /* 로고 이미지를 구역 내에서 맨 왼쪽으로 정렬 */
         }
 
         .btn-ios img {
-            height: 46px; /* 애플 로고를 구글보다 훨씬 더 크게 설정 */
+            height: 42px; /* 로고 크기를 키우되, 버튼 높이(60px) 내에 딱 맞게 조정 */
         }
 
         .btn span {
             text-align: left;
-            padding-left: 15px;
+            padding-left: 12px;
         }
     </style>
 </head>
