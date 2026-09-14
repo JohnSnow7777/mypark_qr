@@ -69,13 +69,15 @@
             display: grid;
             grid-template-columns: 46px 1fr;
             align-items: center;
-            padding: 0 16px; /* 로고를 더 왼쪽으로 밀기 위해 좌측 여백 축소 */
-            height: 60px; /* 애플과 구글 버튼의 상하 크기를 완벽하게 동일하게 고정 */
+            padding: 0 16px;
+            /* 로고를 더 왼쪽으로 밀기 위해 좌측 여백 축소 */
+            height: 60px;
+            /* 애플과 구글 버튼의 상하 크기를 완벽하게 동일하게 고정 */
             color: white;
             text-decoration: none;
             border-radius: 12px;
             font-weight: bold;
-            font-size: 18px;
+            font-size: 20px;
             width: 340px;
             transition: opacity 0.2s;
             box-sizing: border-box;
@@ -98,12 +100,15 @@
             height: 34px;
             max-width: 46px;
             object-fit: contain;
-            justify-self: start; /* 로고 이미지를 구역 내에서 맨 왼쪽으로 정렬 */
+            justify-self: start;
+            /* 로고 이미지를 구역 내에서 맨 왼쪽으로 정렬 */
         }
 
         .btn-ios img {
-            height: 42px; /* 로고 크기를 키우되, 버튼 높이(60px) 내에 딱 맞게 조정 */
-            margin-left: -8px; /* 이미지 자체의 여백을 상쇄하기 위해 애플 로고만 시각적으로 더 왼쪽으로 당김 */
+            height: 42px;
+            /* 로고 크기를 키우되, 버튼 높이(60px) 내에 딱 맞게 조정 */
+            margin-left: -8px;
+            /* 이미지 자체의 여백을 상쇄하기 위해 애플 로고만 시각적으로 더 왼쪽으로 당김 */
         }
 
         .btn span {
@@ -123,14 +128,14 @@
     <div id="fallback">
         <!-- <h2>사용 중인 기기의 스토어를<br>선택해주세요.</h2> -->
         <!-- 텍스트 버튼 안에 로고 삽입 -->
-        <a href="https://apps.apple.com/kr/app/%EB%A7%88%EC%9D%B4%ED%8C%8C%ED%81%AC-m/id6769627482" class="btn btn-ios">
-            <img src="img/apple.png" alt="Apple">
-            <span>App Store (아이폰)</span>
-        </a>
         <a href="https://play.google.com/store/apps/details?id=com.smilesquare.mypark2&pcampaignid=web_share"
             class="btn btn-android">
             <img src="img/google.png" alt="Google">
             <span>Google Play (안드로이드)</span>
+        </a>
+        <a href="https://apps.apple.com/kr/app/%EB%A7%88%EC%9D%B4%ED%8C%8C%ED%81%AC-m/id6769627482" class="btn btn-ios">
+            <img src="img/apple.png" alt="Apple">
+            <span>App Store (아이폰)</span>
         </a>
     </div>
 </body>
