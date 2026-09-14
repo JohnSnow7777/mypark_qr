@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>마이파크 M 다운로드</title>
+    <!-- 파비콘 추가 -->
+    <link rel="icon" type="image/png" href="img/MYPARK_blue_LOGO.png">
+    
     <script>
         window.onload = function () {
             var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
-            // TODO: 실제 앱의 다운로드 주소로 변경해주세요.
             var iosLink = "https://apps.apple.com/kr/app/%EB%A7%88%EC%9D%B4%ED%8C%8C%ED%81%AC-m/id6769627482";
             var androidLink = "https://play.google.com/store/apps/details?id=com.smilesquare.mypark2&pcampaignid=web_share";
 
@@ -23,7 +25,7 @@
             }
             // PC 등 기타 기기일 경우 버튼 화면 표시
             else {
-                document.getElementById('fallback').style.display = 'block';
+                document.getElementById('fallback').style.display = 'flex';
                 document.getElementById('loading').style.display = 'none';
             }
         };
@@ -33,55 +35,65 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             text-align: center;
             padding: 50px 20px;
-            background-color: #f8f9fa;
+            background-color: #2272ED; /* 추출한 파란 로고 색상 */
+            color: white; /* 어두운 배경에 맞게 글씨를 흰색으로 */
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .top-logo {
+            max-width: 250px; /* 로고 크기 조정 */
+            margin-bottom: 40px;
         }
 
         h2 {
-            color: #333;
             margin-bottom: 30px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 15px 30px;
-            margin: 10px;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            width: 250px;
-            transition: opacity 0.2s;
-        }
-
-        .btn:hover {
-            opacity: 0.8;
-        }
-
-        .btn-ios {
-            background-color: #000000;
-        }
-
-        .btn-android {
-            background-color: #3DDC84;
-            color: #000;
+            font-weight: 500;
+            line-height: 1.4;
         }
 
         #fallback {
             display: none;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px; /* 버튼 사이 간격 */
+        }
+
+        .btn-img {
+            display: inline-block;
+            transition: transform 0.2s, opacity 0.2s;
+        }
+
+        .btn-img img {
+            height: 60px; /* 스토어 뱃지 이미지 높이 */
+            object-fit: contain;
+            border-radius: 8px; /* 뱃지 모서리 둥글게 */
+        }
+
+        .btn-img:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
         }
     </style>
 </head>
 
 <body>
+    <!-- 페이지 맨 위 로고 -->
+    <img src="img/mypark_white_slice.png" alt="마이파크 M" class="top-logo">
+    
     <div id="loading">
         <h2>기기에 맞는 앱스토어로 이동 중입니다... 🚀</h2>
     </div>
     <div id="fallback">
         <h2>사용 중인 기기의 스토어를<br>선택해주세요.</h2>
+        <!-- 아이폰 앱스토어 버튼 로고 -->
         <a href="https://apps.apple.com/kr/app/%EB%A7%88%EC%9D%B4%ED%8C%8C%ED%81%AC-m/id6769627482"
-            class="btn btn-ios">App Store (아이폰)</a><br>
+            class="btn-img"><img src="img/apple.png" alt="Download on the App Store"></a>
+        <!-- 구글 플레이 버튼 로고 -->
         <a href="https://play.google.com/store/apps/details?id=com.smilesquare.mypark2&pcampaignid=web_share"
-            class="btn btn-android">Google Play (안드로이드)</a>
+            class="btn-img"><img src="img/google.png" alt="GET IT ON Google Play"></a>
     </div>
 </body>
 
