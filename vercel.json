@@ -1,0 +1,28 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": ".*(iPhone|iPad|iPod|iphone|ipad|ipod).*"
+        }
+      ],
+      "destination": "https://apps.apple.com/kr/app/%EB%A7%88%EC%9D%B4%ED%8C%8C%ED%81%AC-m/id6769627482",
+      "permanent": false
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": ".*(Android|android).*"
+        }
+      ],
+      "destination": "https://play.google.com/store/apps/details?id=com.smilesquare.mypark2&pcampaignid=web_share",
+      "permanent": false
+    }
+  ]
+}
