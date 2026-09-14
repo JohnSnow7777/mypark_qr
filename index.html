@@ -67,9 +67,9 @@
 
         .btn {
             display: grid;
-            grid-template-columns: 40px 1fr;
+            grid-template-columns: 50px 1fr;
             align-items: center;
-            padding: 20px 24px;
+            padding: 12px 24px;
             color: white;
             text-decoration: none;
             border-radius: 12px;
@@ -94,15 +94,19 @@
         }
 
         .btn img {
-            height: 36px;
-            max-width: 40px;
+            height: 34px;
+            max-width: 50px;
             object-fit: contain;
             justify-self: center;
         }
 
+        .btn-ios img {
+            height: 46px; /* 애플 로고를 구글보다 훨씬 더 크게 설정 */
+        }
+
         .btn span {
-            text-align: center;
-            padding-right: 40px; /* 로고 너비만큼 우측 패딩을 줘서 텍스트를 중앙 정렬 유지 */
+            text-align: left;
+            padding-left: 15px;
         }
     </style>
 </head>
