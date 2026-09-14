@@ -70,29 +70,50 @@
             grid-template-columns: 46px 1fr;
             align-items: center;
             padding: 0 16px;
-            /* 로고를 더 왼쪽으로 밀기 위해 좌측 여백 축소 */
             height: 60px;
-            /* 애플과 구글 버튼의 상하 크기를 완벽하게 동일하게 고정 */
             color: white;
             text-decoration: none;
             border-radius: 12px;
             font-weight: bold;
             font-size: 20px;
             width: 340px;
-            transition: opacity 0.2s;
+            transition: all 0.1s ease-in-out;
             box-sizing: border-box;
+            position: relative;
+            margin-bottom: 6px; /* 버튼을 눌렀을 때의 공간 확보 */
         }
 
         .btn-ios {
             background-color: #000000;
+            /* 애플 버튼 입체감 (하단 두께와 그림자) */
+            box-shadow: 0 6px 0 #333333, 0 10px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .btn-ios:hover {
+            transform: translateY(2px);
+            box-shadow: 0 4px 0 #333333, 0 6px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        .btn-ios:active {
+            transform: translateY(6px);
+            box-shadow: 0 0px 0 #333333, 0 2px 4px rgba(0, 0, 0, 0.4);
         }
 
         .btn-android {
-            background-color: #000000;
+            background-color: #3DDC84;
+            color: #000;
+            /* 구글 버튼 입체감 (하단 두께와 그림자) */
+            box-shadow: 0 6px 0 #28A764, 0 10px 15px rgba(0, 0, 0, 0.2);
         }
 
-        .btn:hover {
-            opacity: 0.8;
+        .btn-android:hover {
+            transform: translateY(2px);
+            box-shadow: 0 4px 0 #28A764, 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-android:active {
+            transform: translateY(6px);
+            box-shadow: 0 0px 0 #28A764, 0 2px 4px rgba(0, 0, 0, 0.2);
         }
 
         .btn img {
