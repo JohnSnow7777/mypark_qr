@@ -7,7 +7,7 @@
     <title>마이파크 M 다운로드</title>
     <!-- 파비콘 추가 -->
     <link rel="icon" type="image/png" href="img/MYPARK_blue_LOGO.png">
-    
+
     <script>
         window.onload = function () {
             var userAgent = navigator.userAgent || navigator.vendor || window.opera;
@@ -35,8 +35,10 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             text-align: center;
             padding: 50px 20px;
-            background-color: #2272ED; /* 추출한 파란 로고 색상 */
-            color: white; /* 어두운 배경에 맞게 글씨를 흰색으로 */
+            background-color: #2272ED;
+            /* 추출한 파란 로고 색상 */
+            color: white;
+            /* 어두운 배경에 맞게 글씨를 흰색으로 */
             margin: 0;
             display: flex;
             flex-direction: column;
@@ -44,7 +46,8 @@
         }
 
         .top-logo {
-            max-width: 250px; /* 로고 크기 조정 */
+            max-width: 250px;
+            /* 로고 크기 조정 */
             margin-bottom: 40px;
         }
 
@@ -58,20 +61,22 @@
             display: none;
             flex-direction: column;
             align-items: center;
-            gap: 20px; /* 버튼 사이 간격 */
+            gap: 20px;
+            /* 버튼 사이 간격 */
         }
 
         .btn {
-            display: flex;
+            display: grid;
+            grid-template-columns: 40px 1fr;
             align-items: center;
-            padding: 15px 20px;
+            padding: 20px 24px;
             color: white;
             text-decoration: none;
-            border-radius: 8px;
+            border-radius: 12px;
             font-weight: bold;
-            width: 250px;
+            font-size: 18px;
+            width: 340px;
             transition: opacity 0.2s;
-            position: relative;
             box-sizing: border-box;
         }
 
@@ -89,16 +94,15 @@
         }
 
         .btn img {
-            height: 24px;
-            width: auto;
-            position: absolute;
-            left: 20px; /* 왼쪽에 고정 */
+            height: 36px;
+            max-width: 40px;
             object-fit: contain;
+            justify-self: center;
         }
 
         .btn span {
-            flex-grow: 1;
             text-align: center;
+            padding-right: 40px; /* 로고 너비만큼 우측 패딩을 줘서 텍스트를 중앙 정렬 유지 */
         }
     </style>
 </head>
@@ -106,15 +110,14 @@
 <body>
     <!-- 페이지 맨 위 로고 -->
     <img src="img/mypark_white_slice.png" alt="마이파크 M" class="top-logo">
-    
+
     <div id="loading">
         <h2>기기에 맞는 앱스토어로 이동 중입니다... 🚀</h2>
     </div>
     <div id="fallback">
-        <h2>사용 중인 기기의 스토어를<br>선택해주세요.</h2>
+        <!-- <h2>사용 중인 기기의 스토어를<br>선택해주세요.</h2> -->
         <!-- 텍스트 버튼 안에 로고 삽입 -->
-        <a href="https://apps.apple.com/kr/app/%EB%A7%88%EC%9D%B4%ED%8C%8C%ED%81%AC-m/id6769627482"
-            class="btn btn-ios">
+        <a href="https://apps.apple.com/kr/app/%EB%A7%88%EC%9D%B4%ED%8C%8C%ED%81%AC-m/id6769627482" class="btn btn-ios">
             <img src="img/apple.png" alt="Apple">
             <span>App Store (아이폰)</span>
         </a>
